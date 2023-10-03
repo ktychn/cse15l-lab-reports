@@ -30,15 +30,23 @@ The output is an error because you can't change the directory to a file
 
 
 ![Image](ls.png)  
-* no arguments:
+* no arguments:  
+The working directory was
+The output was
+The output is an error  
 
   
 ![Image](lsDir.png)  
-* path to a directory:
-
+* path to a directory:  
+The working directory was
+The output was
+The output is an error  
   
 ![Image](lsFile.png)  
 * path to a file:
+The working directory was
+The output was
+The output is an error  
 
 
 3. **cat**
@@ -53,7 +61,13 @@ The output is not an error since entering `cat ` with no arguments
   
 ![Image](catDir.png)  
 * path to a directory:
+The working directory was
+The output was
+The output is an error  
 
   
 ![Image](catFile.png)  
 * path to a file:
+The working directory was
+The output was
+The output is an error  
