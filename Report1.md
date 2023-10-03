@@ -1,24 +1,25 @@
 # Lab Report 1
-## **cd**
-no arguments: 
+1. **cd**
+![Image](
+*no arguments: 
 
-path to a directory:
+*path to a directory:
 
-path to a file:
-
-
-## **ls**
-no arguments: 
-
-path to a directory:
-
-path to a file:
+*path to a file:
 
 
-## **cat**
-no arguments: 
+2. **ls**
+*no arguments: 
 
-path to a directory:
+*path to a directory:
 
-path to a file:
+*path to a file:
+
+
+3. **cat**
+*no arguments: 
+
+*path to a directory:
+
+*path to a file:
 
