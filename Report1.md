@@ -2,8 +2,10 @@
 1. **cd**  
 
 * No arguments:
+
   
 ![Image](cd no dir.png)
+
 
 The working directory was /home when the command was run.
 There was no output printed when `cd ` was run because
