@@ -26,11 +26,18 @@ The output was
 The output is an error because you can't change the directory to a file
 
 
-2. **ls**
-* no arguments: 
+2. **ls**  
 
+
+![Image](ls.png)  
+* no arguments:
+
+  
+![Image](lsDir.png)  
 * path to a directory:
 
+  
+![Image](lsFile.png)  
 * path to a file:
 
 
