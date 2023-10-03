@@ -29,21 +29,22 @@ The output is an error because you can't change the directory to a file
 2. **ls**  
 
 
+* No arguments:  
 ![Image](ls.png)  
-* no arguments:  
 The working directory was
 The output was
 The output is an error  
 
-  
+   
+* Path to a directory:
 ![Image](lsDir.png)  
-* path to a directory:  
 The working directory was
 The output was
 The output is an error  
   
-![Image](lsFile.png)  
-* path to a file:
+ 
+* Path to a file:
+![Image](lsFile.png) 
 The working directory was
 The output was
 The output is an error  
@@ -52,22 +53,22 @@ The output is an error
 3. **cat**
 
 
+* No arguments:
 ![Image](cat.png)  
-* no arguments:
-The working directory was /lecture1 when the command was run.
-The output looked blank because the terminal was waiting for user input. After you typed something and pressed enter, it would print what you typed. You had to exit using `control c`.
-The output is not an error since entering `cat ` with no arguments 
+The working directory was /lecture1 when the command was run.  
+The output looked blank because the terminal was waiting for user input. After you typed something and pressed enter, it would print what you typed,and you had to exit using `control c`.  
+The output is not an error since entering `cat ` with no arguments, the terminal does not have a directory or file to refer to, and will not be able to output anything without further input from the user.  
 
-  
-![Image](catDir.png)  
-* path to a directory:
+   
+* Path to a directory:
+![Image](catDir.png) 
 The working directory was
 The output was
 The output is an error  
 
-  
-![Image](catFile.png)  
-* path to a file:
+   
+* Path to a file:
+![Image](catFile.png) 
 The working directory was
 The output was
 The output is an error  
