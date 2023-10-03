@@ -42,9 +42,18 @@ The output is an error because you can't change the directory to a file
 
 
 3. **cat**
-* no arguments: 
 
+
+![Image](cat.png)  
+* no arguments:
+The working directory was /lecture1 when the command was run.
+The output looked blank because the terminal was waiting for user input. After you typed something and pressed enter, it would print what you typed. You had to exit using `control c`.
+The output is not an error since entering `cat ` with no arguments 
+
+  
+![Image](catDir.png)  
 * path to a directory:
 
+  
+![Image](catFile.png)  
 * path to a file:
-
