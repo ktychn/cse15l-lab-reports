@@ -1,7 +1,8 @@
 # Lab Report 1
 1. **cd**  
 
-* No arguments:  
+* No arguments:
+  
 ![Image](cd no dir.png)
 
 The working directory was /home when the command was run.
