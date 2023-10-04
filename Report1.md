@@ -4,11 +4,11 @@
 * No arguments:
 
   
-![Image](cd no dir.png)
+![Image](cdDir.png)
 
 
 The working directory was /home when the command was run.  
-There was no output printed when `cd ` was run because  
+There was no output printed when `cd ` was run because you did not provide a directory to change to, so  
 The output is not an error since you wouldn't expect any output with this command and no arguments.  
 
 
