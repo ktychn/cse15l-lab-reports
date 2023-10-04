@@ -7,9 +7,7 @@
 ![Image](cdDir.png)
 
 
-The working directory was /home when the command was run.  
-There was no output printed when `cd ` was run because you did not provide a directory to change to, so  
-The output is not an error since you wouldn't expect any output with this command and no arguments.  
+The working directory was /home when the command was run. There was no output printed when `cd ` was run because you did not provide a directory to change to, so nothing in the terminal changed. The The lack of output is not an error since you wouldn't expect there to be any changes when no arguments were input.  
 
 
 * Path to a directory:
