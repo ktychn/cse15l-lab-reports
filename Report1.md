@@ -26,7 +26,7 @@ The working directory was /lecture1 when the command was run. The output printed
    
 * Path to a directory:  
 ![Image](lsDir.png)  
-The working directory was /lecture1 when the command was run. The output printed out the contents of the input directory, which was the /messages folder. This was successful since the /messages folder is within the the working directory, /lecture1, so the program could locate the directory and print its contents successfully. This output is not an error, since every file in the /messages folder was correctly printed as expected when the `ls` command was run.
+The working directory was /lecture1 when the command was run. The output printed out the contents of the input directory, which was the /messages folder. Since the working directory was /lecture1, the input path corresponded to /home/lecture1/messages, and the contents of the /messages directory could be printed successfully. This output is not an error, since every file in the /messages folder was correctly printed as expected when the `ls` command was run.
   
  
 * Path to a file:  
