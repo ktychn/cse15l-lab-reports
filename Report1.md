@@ -3,8 +3,7 @@
 
 * No arguments:  
 ![Image](cdNoDir.png)  
-The working directory was /home when the command was run. Since there was no argument given, the directory is changed to /home. Because the working directory was /home already when the command was run, there is no output and the terminal still displays [user@sahara ~]. Running `cd` with no arguments changes the directory to the root directory, which is /home. 
-OLD: There was no output when `cd` was run because no directory was provided as input, so the terminal still displays [user@sahara ~], or /home, as the working directory in the next line, and nothing was printed. The lack of output is not an error since you wouldn't expect there to be any changes to the working directory.  
+The working directory was /home when the command was run. Since there was no argument given, the directory is changed to /home. Because the working directory was /home already when the command was run, there is no output and the terminal still displays [user@sahara ~], or /home, in the next line. Running `cd` with no arguments changes the directory to the root directory, which is /home. The lack of output is not an error since you wouldn't expect there to be any changes to the working directory.  
 
 * Path to a directory:  
 ![Image](cdDir.png)  
