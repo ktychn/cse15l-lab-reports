@@ -3,8 +3,8 @@
 
 * No arguments:  
 ![Image](cdNoDir.png)  
-The working directory was /home when the command was run. There was no output when `cd` was run because no directory was provided as input, so the terminal still displays [user@sahara ~], or /home, as the working directory in the next line, and nothing was printed. The lack of output is not an error since you wouldn't expect there to be any changes to the working directory when no arguments were input.  
-
+The working directory was /home when the command was run. Since there was no argument given, the directory is changed to /home. Because the working directory was /home already when the command was run, there is no output and the terminal still displays [user@sahara ~]. Running `cd` with no arguments changes the directory to the root directory, which is /home. 
+OLD: There was no output when `cd` was run because no directory was provided as input, so the terminal still displays [user@sahara ~], or /home, as the working directory in the next line, and nothing was printed. The lack of output is not an error since you wouldn't expect there to be any changes to the working directory.  
 
 * Path to a directory:  
 ![Image](cdDir.png)  
@@ -13,7 +13,7 @@ The working directory was /home when this command was run. The output was that t
 
 * Path to a file:  
 ![Image](cd file.png)  
-The working directory was /lecture1 when the command was run. The output message reflects that the terminal tried to change the directory to the input, which was a file, and that it was unsuccessful, since nothing should be printed when the directory is correctly changed. The program was able to find the /messages folder within the /lecture1 directory, but could not change the directory since the input was a file. This output is an error because the directory cannot be set to a file, so the command could not be executed.  
+The working directory was /lecture1 when the command was run. The output message reflects that the terminal tried to change the directory to the given argument, which was the path to a file, and that it was unsuccessful, since nothing should be printed when the directory is correctly changed. The directory cannot be set to a file, so passing in a path to a file caused a message to be output that tells you that the path led to a file, not a directory as expected. This output is an error because the directory cannot be set to a file, so the command could not be executed.  
 
 
 ## **ls**  
@@ -31,7 +31,7 @@ The working directory was /lecture1 when the command was run. The output printed
  
 * Path to a file:  
 ![Image](lsFile.png) 
-The working directory was /lecture1 when the command was run. The output printed out the relative path of the input file, which was the same as what was input. Since the en-us.txt file is within the /messages folder, and the /messages folder is within the working directory, /lecture1, the program was able to successfully output the name of the given file. The output is not an error, since the command returned what was expected.  
+The working directory was /lecture1 when the command was run. The output printed out the relative path of the argument, so this looked the same as what was input. Since the en-us.txt file is within the /messages folder, and the /messages folder is within the working directory, /lecture1, the program was able to successfully output the name of the given file. The output is not an error, since the command returned what was expected.  
 
 
 ## **cat**  
@@ -44,7 +44,7 @@ The working directory was /lecture1 when the command was run.  The output looked
    
 * Path to a directory:  
 ![Image](catDir.png)   
-The working directory was /lecture1 when the command was run. The output tells you that /messages is a directory, which is true, as /messages is a folder within the /lecture1 directory. Since /messages within the /lecture1 directory was found and identified successfully, this command was executed as expected. The output is not an error, since you would expect `cat` to give you this output when a directory is input.   
+The working directory was /lecture1 when the command was run. The output tells you that /messages is a directory, as /messages is a folder within the /lecture1 directory. This output is an error, since `cat` expects an argument to be a path to a file, but the argument was a path to a directory. `cat` is unable to print the contents of a directory, so `cat` outputs a message to tell the user that the argument was a directory, which `cat` cannot handle properly.   
 
    
 * Path to a file:  
