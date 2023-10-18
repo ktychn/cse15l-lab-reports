@@ -53,10 +53,10 @@ class StringServer {
   
 After changing directory to the `.ssh` directory I created, running `ls id_rsa` returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
 
-![Image](publicKey.png)  
+![Image](publicKey.png)  this screenshot needs to get fixed
 - The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
   
-After logging into my account on `ieng6` and changing directory to the `.ssh` directory, running `ls authorized_keys` returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/authorized_keys`. This was created during lab when we ran `scp` to copy the file from our personal computer to our account on `ieng6`, which was saved under the name `authorized-keys`.
+After logging into my account on `ieng6` and changing directory to the `.ssh` directory, running `ls authorized_keys` returned the path to the private key for my SSH key, which is `/.ssh/authorized_keys`. This was created during lab when we ran `scp` to copy the file from our personal computer to our account on `ieng6`, which was saved under the name `authorized-keys`.
 
 
 ![Image](login.png)  
