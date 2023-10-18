@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
     int numObjects = 1;
     String contents = "";
 
@@ -41,11 +39,11 @@ class StringServer {
 }
 ```
 ![Image](firstAdd.png)  
-- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in is `http://localhost:4029/add-message?s=Hi`. Within the method, the value of `int` numObjects is 1 initially, and `String` contents is empty. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, Hi]`. After this specific request is run, `int` numObjects is incremented by 1, so it becomes equal to 2, and `String` contents is now equal to `"1. Hi\n"`. 
+- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in to handleRequest is `http://localhost:4029/add-message?s=Hi`. Within the method, the value of `int` numObjects is 1 initially, and `String` contents is empty. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, Hi]`. After this specific request is run, `int` numObjects is incremented by 1, so it becomes equal to 2, and `String` contents is now equal to `"1. Hi\n"`. 
 
 
 ![Image](secondAdd.png)  
-- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in is `http://localhost:4029/add-message?s=How%20are%20you`. Within the method initially, the value of `int` numObjects is 2, and `String` contents is equal to `"1. Hi\n"`. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, How are you]`. After this specific request is run, `int` numObjects is incremented by 1, so it becomes equal to 3, and `String` contents is now equal to `"1. Hi\n2. How are you\n"`. 
+- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in to handleRequest is `http://localhost:4029/add-message?s=How%20are%20you`. Within the method initially, the value of `int` numObjects is 2, and `String` contents is equal to `"1. Hi\n"`. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, How are you]`. After this specific request is run, `int` numObjects is incremented by 1, so it becomes equal to 3, and `String` contents is now equal to `"1. Hi\n2. How are you\n"`. 
 
 # Part 2
 ![Image](privatePath.png)  
