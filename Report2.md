@@ -49,7 +49,7 @@ class StringServer {
 ![Image](privatePath.png)  
 - The path to the private key for your SSH key for logging into `ieng6` (on your computer or on the home directory of the lab computer)
   
-Running `ls id_rsa` (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
+Running `ls id_rsa` on my computer (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
 
 ![Image](publicKey.png)  this screenshot needs to get fixed
 - The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
