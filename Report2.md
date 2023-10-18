@@ -49,12 +49,12 @@ class StringServer {
 ![Image](privatePath.png)  
 - The path to the private key for your SSH key for logging into `ieng6` (on your computer or on the home directory of the lab computer)
   
-Running `ls id_rsa` (with the root directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
+Running `ls id_rsa` (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
 
 ![Image](publicKey.png)  this screenshot needs to get fixed
 - The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
   
-After logging into my account on `ieng6` and changing directory to the `.ssh` directory, running `ls authorized_keys` returned the path to the private key for my SSH key, which is `/.ssh/authorized_keys`. This was created during lab when we ran `scp` to copy the file from our personal computer to our account on `ieng6`, which was saved under the name `authorized-keys`.
+After logging into my account on `ieng6` and changing directory to the `.ssh` directory, running `ls authorized_keys` returned the path to the private key for my SSH key, which is `/.ssh/authorized_keys`. This was created during lab when we ran `scp` to copy the file from our personal computer to our account on `ieng6`, and saved the copy under the name `authorized-keys`.
 
 
 ![Image](login.png)  
@@ -65,5 +65,5 @@ I was able to log into `ieng6` without being prompted to enter my password, as a
   
 
 # Part 3 
-In this week (week 3) of lab, I learned that 
+In week 2 of lab, I learned how to connect to a remote server from my computer, which I had never done before. This week (week 3) in lab, I also was able to connect to a remote server 
 
