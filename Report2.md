@@ -47,18 +47,16 @@ class StringServer {
 
 # Part 2
 ![Image](privatePath.png)  
-- The path to the private key for your SSH key for logging into `ieng6` (on your computer or on the home directory of the lab computer)
-  
+
 Running `ls .ssh/id_rsa` on my computer (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
 
-![Image](publicKey.png)  this screenshot needs to get fixed
+![Image](publicKey.png)  this screenshot needs to get fixed  
 - The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
   
-After logging into my account on `ieng6`, running `ls .ssh/authorized_keys` returned the path to the public key for my SSH key. This was created during lab when we created a directory called `.ssh`, then ran `scp` to copy the file from our personal computer to our account on `ieng6`, saving the copy under the name `authorized-keys`.
+After logging into my account on `ieng6`, running `ls .ssh/authorized_keys` returned the path to the public key for my SSH key. This was created during lab when we created a directory called `.ssh`, then ran `scp` to copy the file from our personal computer to our account on `ieng6`, saving the copy under the name `authorized_keys`.
 
 
 ![Image](login.png)  
-- A terminal interaction where you log into ieng6 with your course-specific account without being asked for a password.
   
 I was able to log into `ieng6` without being prompted to enter my password, as after I entered the `ssh cs15lfa23la@ieng6.ucsd.edu` command, it immediately began the login steps without any additional input.
 
