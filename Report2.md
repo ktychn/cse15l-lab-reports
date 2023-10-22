@@ -46,14 +46,13 @@ class StringServer {
 - The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in to handleRequest is `http://localhost:4029/add-message?s=How%20are%20you`. Within the method initially, the value of `int` numObjects is 2, and `String` contents is equal to `"1. Hi\n"`. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, How are you]`. After this specific request is run, the value of `int` numObjects is incremented by 1, so it becomes equal to 3, and the value of `String` contents is now equal to `"1. Hi\n2. How are you\n"`. 
 
 # Part 2
-![Image](privatePath.png)  
+![Image](privateKey.png)  
 
-Running `ls .ssh/id_rsa` on my computer (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
+Running `ls ~/.ssh/id_rsa` on my computer (with the home directory as my working directory) returned the path to the private key for my SSH key, which is `/Users/katyechen/.ssh/id_rsa`.
 
 ![Image](publicKey.png)   
-- The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
   
-After logging into my account on `ieng6`, running `ls .ssh/authorized_keys` returned the path to the public key for my SSH key. This was created during lab when we created a directory called `.ssh`, then ran `scp` to copy the file from our personal computer to our account on `ieng6`, saving the copy under the name `authorized_keys`. The `authorized_keys` file is now inside the `.ssh` directory.  
+After logging into my account on `ieng6`, running `ls ~/.ssh/authorized_keys` returned the path to the public key for my SSH key, which is `/home/linux/ieng6/cs15lfa23/cs15lfa23la/.ssh/authorized_keys`. This was created during lab when we created a directory called `.ssh`, then ran `scp` to copy the file from our personal computer to our account on `ieng6`, saving the copy under the name `authorized_keys`. The `authorized_keys` file is now inside the `.ssh` directory.  
 
 
 ![Image](login.png)  
