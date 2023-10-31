@@ -39,7 +39,7 @@ class StringServer {
 }
 ```
 ![Image](firstAdd.png)  
-- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in to handleRequest is `http://localhost:4029/add-message?s=Hi`. Within the method, the value of `int` numObjects is 1 initially, and `String` contents is empty. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, Hi]`. After this specific request is run, the value of `int` numObjects is incremented by 1, so it becomes equal to 2, and the value of `String` contents is now equal to `"1. Hi\n"`. 
+- The method handleRequest is called, with the url of the page being passed in as an URI argument. In this screenshot, the value for URI url being passed in to handleRequest is `http://localhost:4029/add-message?s=Hi`. Within the method, `url.getPath()` returns `/add-message?s=Hi`, so the value of `int` numObjects is 1 initially, and `String` contents is empty. The value of `String[]` parameters is set to the query of the url split at =, so this becomes `[s, Hi]`. After this specific request is run, the value of `int` numObjects is incremented by 1, so it becomes equal to 2, and the value of `String` contents is now equal to `"1. Hi\n"`. 
 
 
 ![Image](secondAdd.png)  
