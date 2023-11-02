@@ -194,4 +194,4 @@ Example 1:
   technical/government/Media
   technical/government/Post_Rate_Comm
   ```  
-  In this example, I used the `-s-` and the `-maxdepth` option to search the `technical/government` directory in alphabetical order, and only without searching any of the subdirectories inside the `government` directory. This command returned all the files/directories within the `government` directory in alphabetical order, so this command could be useful as it can help avoid the need to sort your `find` results alphabetically after you've already run the command.
+  In this example, I used the `-s` and the `-maxdepth` options to search the `technical/government` directory in alphabetical order, and  without searching any of the subdirectories inside the `government` directory. This command returned all the files/directories within the `government` directory in alphabetical order, so this command could be useful as it can help avoid the need to sort your `find` results alphabetically after you've already run the command.
