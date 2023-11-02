@@ -1,6 +1,5 @@
 # Part 1 - Bugs  
-- A failure-inducing input for the buggy program, as a JUnit test and any associated code (write it as a code block in Markdown)
-This JUnit test results in a failure:
+- This JUnit test results in a failure for the buggy program:
 ```
 @Test
   public void testReversedBug() {
@@ -8,7 +7,7 @@ This JUnit test results in a failure:
     assertArrayEquals(new int[]{ 3, 2, 1 }, ArrayExamples.reversed(input1));
   }
 ```
-This is the code for the `reversed` method being tested:  
+This is the buggy code for the `reversed` method being tested:  
 ```
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -19,8 +18,7 @@ This is the code for the `reversed` method being tested:
   }
 ```  
   
-- An input that doesn’t induce a failure, as a JUnit test and any associated code (write it as a code block in Markdown)  
-This JUnit test of the `reversed` method does NOT induce a failure:
+- This JUnit test of the `reversed` method does NOT induce a failure (the same buggy method from the previous example is called):
 ```
   @Test
   public void testReversed() {
@@ -29,8 +27,7 @@ This JUnit test of the `reversed` method does NOT induce a failure:
   }
 ```
   
-- The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
-This screenshot shows output of running these tests using the original `reversed` method code.  
+- This screenshot shows the symptom, as output of running these tests using the original `reversed` method code.  
 ![Image](reversedFail.png)  
 
 (The code for the `runTests.sh` bash script is these two lines:) 
@@ -40,8 +37,7 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ArrayTests.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ArrayTests
 ```  
   
-- The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)  
-Before:
+- This is the buggy code before being fixed:
 ```
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -51,7 +47,7 @@ Before:
     return arr;
   }
 ```
-After:
+This is the code after being fixed:
 ```   
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -61,15 +57,15 @@ After:
     return newArray;
   }
 ```   
-
-Orirginally, the elements of the input array, `arr`, were being assigned the values of the newArray, `arr`. But since the new array was never assigned any values, all the elements are just zero, so all the elements in the new array are just zero as well. Since the method is supposed to return a new array with the old array's elements in reversed order, this results in an error unless the array is empty, as is the case with the JUnit test that passes.  
+Orirginally, the elements of the input array, `arr`, were being assigned the values of the newArray, `arr`. But since the new array was never assigned any values, all its elements are just zero, so all the elements in the new array become zeros as well. Since the method is supposed to return a new array with the old array's elements in reversed order, this results in an error unless the array is empty, as is the case with the JUnit test that passes.  
 To fix this, the elements of the NEW array needed to be assigned the elements of the input array, in reverse order. The method was also initially returning the input array, so the new array `newArray` needed be retunred instead. Changing the statement `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];` and returning `newArray` rather than `arr` fixed the issues with this method.   
 
 
 # Part 2 - Researching Commands 
 I chose to find alternative ways to use `find`.  
 
-1. `name -iname` (I found this option by using `man find` in the terminal)  
+1. `name -iname` (I found this option by using `man find` in the terminal)
+
  Example 1:
   - Command:  
   ```
@@ -79,7 +75,7 @@ I chose to find alternative ways to use `find`.
   ```
   technical/government/Media
   ```  
-  In this example, I used the `-iname` option for `find` to search the `government` directory of `./technical` for a file whose name contained the string `"media"`. The command returned a file named `"Media"`, so the `-iname` option found a match even though I entered the string with a lowercase m, and the file name had an uppercase M. `find -iname` found a match despite the different cases for m, which would be useful if you are unsure of exactly what the file's name is.  
+  In this example, I used the `-iname` option for `find` to search the `government` directory within `./technical` for a file whose name contained the string `"media"`. The command returned a file named `"Media"`, so the `-iname` option found a match in `government` even though I entered the string with a lowercase m, and the file name had an uppercase M. `find -iname` found a match despite the different cases for m, which would be useful if you are unsure of exactly what the file's name is.  
 
   Example 2:
   - Command:  
@@ -107,7 +103,6 @@ I chose to find alternative ways to use `find`.
   technical/911report/chapter-11.txt
   ```  
   In this example, I used the `-iname` option for `find` to search the `911report` directory of `./technical` for a file whose name contains the string `".TXT"`. The command returned all the files in the directory whose names contained ".txt," so the `-iname` option was able to find all the appropriate files, even though I entered the string "TXT" in all caps, and the file names are all in lowercase. The `-iname` option could definitely be useful for doing searches when you are unfamiliar with the syntax of the file names you are searching.  
-   
 2. `find -path` (I found this option by using `man find` in the terminal)  
 Example 1:  
   - Command:  
