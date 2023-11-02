@@ -102,7 +102,8 @@ I chose to find alternative ways to use `find`.
   technical/911report/chapter-10.txt
   technical/911report/chapter-11.txt
   ```  
-  In this example, I used the `-iname` option for `find` to search the `911report` directory of `./technical` for a file whose name contains the string `".TXT"`. The command returned all the files in the directory whose names contained ".txt," so the `-iname` option was able to find all the appropriate files, even though I entered the string "TXT" in all caps, and the file names are all in lowercase. The `-iname` option could definitely be useful for doing searches when you are unfamiliar with the syntax of the file names you are searching.  
+  In this example, I used the `-iname` option for `find` to search the `911report` directory of `./technical` for a file whose name contains the string `".TXT"`. The command returned all the files in the directory whose names contained ".txt," so the `-iname` option was able to find all the appropriate files, even though I entered the string "TXT" in all caps, and the file names are all in lowercase. The `-iname` option could definitely be useful for doing searches when you are unfamiliar with the syntax of the file names you are searching. 
+
 2. `find -path` (I found this option by using `man find` in the terminal)  
 Example 1:  
   - Command:  
@@ -117,7 +118,7 @@ Example 1:
   technical/plos/pmed.0020274.txt
   technical/plos/pmed.0020278.txt
   ```  
-  In this example, I used the `-path` option to search for files in the `technical/plos` directory that followed the pattern `pmed.002027`, and it output all files whose name matched the given pattern. This could be helpful when searching for files whose names match a specific pattern or contain a certain string.
+  In this example, I used the `-path` option to search for files in the `technical/plos` directory whose path names followed the pattern `pmed.002027*`, and it output all files whose name matched the given pattern. This could be helpful when searching for files whose names match a specific pattern or contain a certain string.
 
  Example 2:
   - Command:   
@@ -128,7 +129,7 @@ Example 1:
   ```
   technical/911report/chapter-8.txt
   ```    
-  In this example, I used the `-path` option to search for files in the `technical/911report` directory that contained an "8" as specified in the pattern, and it output all files whose name contained an "8". This option could be helpful if you are searching for a file that you know contains a specific string, but you are unsure of where in the name the string is, as you could use a pattern search like in this example.  
+  In this example, I used the `-path` option to search for files in the `technical/911report` directory whose path names contained an "8" as specified in the pattern, and it output all files whose paths contained an "8". This option could be helpful if you are searching for a file that you know contains a specific string, but you are unsure of where in the name the string is, as you could use a pattern search like in this example.  
 
 3. `find -maxdepth` (I found this option using `man find` in the terminal)  
  Example 1:  
@@ -172,7 +173,7 @@ Example 1:
   technical/government/Media/Poverty_Lawyers.txt
   technical/government/Media/Texas_Lawyer.txt
   ```  
-  In this example, I used the `-s` option to specify that the `find` commmand should search the `technical/government/Media` directory in alphabetical order for file names that contain the string "Law". This command returned all matching file names within the `Media` subdirectory in alphabetical order, so the `-s` option could be useful if you want the directory to be traversed, and the results to be returned, in alphatbetical order.
+  In this example, I used the `-s` option to specify that the `find` commmand should search the `technical/government/Media` directory in alphabetical order for file names that contain the string "Law". This command returned all matching file names within the `Media` subdirectory in alphabetical order, so the `-s` option could be useful if you want the directory to be traversed, and the results to be returned, in alphabetical order.
 
   Example 2:  
   - Command:  
