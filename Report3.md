@@ -69,7 +69,7 @@ To fix this, the elements of the NEW array needed to be assigned the elements of
 # Part 2 - Researching Commands 
 I chose to find alternative ways to use `find`.  
 
-1. `name -iname` (I found this option by using `man find` in the terminal)
+1. `name -iname` (I found this option by using `man find` in the terminal)  
  Example 1:
   - Command:  
   ```
@@ -135,7 +135,7 @@ Example 1:
   ```    
   In this example, I used the `-path` option to search for files in the `technical/911report` directory that contained an "8" as specified in the pattern, and it output all files whose name contained an "8". This option could be helpful if you are searching for a file that you know contains a specific string, but you are unsure of where in the name the string is, as you could use a pattern search like in this example.  
 
-3. `find -maxdepth` (I found this option using `man find` in the terminal)
+3. `find -maxdepth` (I found this option using `man find` in the terminal)  
  Example 1:  
   - Command:  
   ```
@@ -159,7 +159,7 @@ Example 1:
   ```
   In this example, I used the `-maxdepth` option to specify that the `find` command should only search at most 1 directory levels below the `./technical/government` directory for files whose names matched the pattern of starting with a capital A. This returned the matching files within the `government` directory, without searching any of the subdirectories within `government`, so this command could be useful when you want to search within a directory without also searching its subdirectories.  
    
-4. `find -s` (I found this option by using `man find` in the terminal)  \
+4. `find -s` (I found this option by using `man find` in the terminal)  
  Example 1:  
   - Command:  
   ```
