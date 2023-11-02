@@ -64,7 +64,8 @@ To fix this, the elements of the NEW array needed to be assigned the elements of
 # Part 2 - Researching Commands 
 I chose to find alternative ways to use `find`.  
 
-**Option 1** `find -iname` 
+**Option 1:** `find -iname`  
+
 I found this option by using `man find` in the terminal.
 
 Example 1:
@@ -105,7 +106,8 @@ technical/911report/chapter-11.txt
 ```  
 In this example, I used the `-iname` option for `find` to search the `911report` directory of `./technical` for a file whose name contains the string `".TXT"`. The command returned all the files in the directory whose names contained ".txt," so the `-iname` option was able to find all the appropriate files, even though I entered the string "TXT" in all caps, and the file names are all in lowercase. The `-iname` option could definitely be useful for doing searches when you are unfamiliar with the syntax of the file names you are searching. 
 
-**Option 2** `find -path` 
+**Option 2:** `find -path` 
+
 I found this option by using `man find` in the terminal.  
 
 Example 1:  
@@ -134,7 +136,8 @@ technical/911report/chapter-8.txt
 ```    
 In this example, I used the `-path` option to search for files in the `technical/911report` directory whose path names contained an "8" as specified in the pattern, and it output all files whose paths contained an "8". This option could be helpful if you are searching for a file that you know contains a specific string, but you are unsure of where in the name the string is, as you could use a pattern search like in this example.  
 
-**Option 3** `find -maxdepth` 
+**Option 3:** `find -maxdepth`  
+
 I found this option by using `man find` in the terminal.   
 
 Example 1:  
@@ -160,7 +163,8 @@ find ./technical/government  -maxdepth 1  -name "A*"
 ```
 In this example, I used the `-maxdepth` option to specify that the `find` command should only search at most 1 directory levels below the `./technical/government` directory for files whose names matched the pattern of starting with a capital A. This returned the matching files within the `government` directory, without searching any of the subdirectories within `government`, so this command could be useful when you want to search within a directory without also searching its subdirectories.  
    
-**Option 4** `find -s` 
+**Option 4:** `find -s`  
+
 I found this option by using `man find` in the terminal.  
 
 Example 1:  
