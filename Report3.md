@@ -10,8 +10,6 @@ This JUnit test results in a failure:
 ```
 This is the code for the `reversed` method being tested:  
 ```
-// Returns a *new* array with all the elements of the input array in reversed
-  // order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -172,11 +170,7 @@ find ./technical/government  -maxdepth 1  -name "A*"
 ```
 In this example, I used the `-maxdepth` option to specify that the `find` command should only search at most 1 directory levels below the `./technical/government` directory for files whose names matched the pattern of starting with a capital A. This returned the matching files within the `government` directory, without searching any of the subdirectories within `government`, so this command could be useful when you want to search within a directory without also searching its subdirectories.  
    
-4. `find -user` (I found this option by using `man find` in the terminal)  \
--user uname
-             True if the file belongs to the user uname.  If uname is numeric
-             and there is no such user name, then uname is treated as a user
-             ID.
+4. `find -s` (I found this option by using `man find` in the terminal)  \
 Example 1:  
 - Command:  
 ```
@@ -193,15 +187,22 @@ technical/government/Media/Library_Lawyers.txt
 technical/government/Media/Philly_Lawyers.txt
 technical/government/Media/Poverty_Lawyers.txt
 technical/government/Media/Texas_Lawyer.txt
-```
-In this example,
+```  
+In this example, I used the `-s` option to specify that the `find` commmand should search the `technical/government/Media` directory in alphabetical order for file names that contain the string "Law". This command returned all matching file names within the `Media` subdirectory in alphabetical order, so the `-s` option could be useful if you want the directory to be traversed, and the results to be returned, in alphatbetical order.
 
 Example 2:  
 - Command:  
 ```
-```
+find -s technical/government -maxdepth 1
+```   
 - Output:
 ```
+technical/government
+technical/government/About_LSC
+technical/government/Alcohol_Problems
+technical/government/Env_Prot_Agen
+technical/government/Gen_Account_Office
+technical/government/Media
+technical/government/Post_Rate_Comm
 ```  
-
-
+In this example, I used the `-s-` and the `-maxdepth` option to search the `technical/government` directory in alphabetical order, and only without searching any of the subdirectories inside the `government` directory. This command returned all the files/directories within the `government` directory in alphabetical order, so this command could be useful as it can help avoid the need to sort your `find` results alphabetically after you've already run the command.
