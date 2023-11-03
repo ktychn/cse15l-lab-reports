@@ -57,8 +57,8 @@ This is the code after being fixed:
     return newArray;
   }
 ```   
-Orirginally, the elements of the input array, `arr`, were being assigned the values of the newArray, `arr`. But since the new array was never assigned any values, all its elements are just zero, so all the elements in the new array become zeros as well. Since the method is supposed to return a new array with the old array's elements in reversed order, this results in an error unless the array is empty, as is the case with the JUnit test that passes.  
-To fix this, the elements of the NEW array needed to be assigned the elements of the input array, in reverse order. The method was also initially returning the input array, so the new array `newArray` needed be retunred instead. Changing the statement `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];` and returning `newArray` rather than `arr` fixed the issues with this method.   
+Originally, the elements of the input array, `arr`, were being assigned the values of the newArray, `arr`. But since the new array was never assigned any values, all its elements are just zero, so the elements of `arr` all become zeros as well. Since the method is supposed to return a new array with the old array's elements in reversed order, this results in an error unless the array is empty, as is the case with the JUnit test that passes.  
+To fix this, the elements of the NEW array needed to be assigned the elements of the input array, in reverse order. The method was also initially returning the input array, so the new array `newArray` needed be returned instead. Changing the statement `arr[i] = newArray[arr.length - i - 1];` to `newArray[i] = arr[arr.length - i - 1];` and returning `newArray` rather than `arr` fixed the issues with this method.   
 
 
 # Part 2 - Researching Commands 
@@ -134,7 +134,7 @@ find technical -path "technical/911report/*8*"
 ```
 technical/911report/chapter-8.txt
 ```    
-In this example, I used the `-path` option to search for files in the `technical/911report` directory whose path names contained an "8" as specified in the pattern, and it output all files whose paths contained an "8". This option could be helpful if you are searching for a file that you know contains a specific string, but you are unsure of where in the name the string is, as you could use a pattern search like in this example.  
+In this example, I used the `-path` option to search for files in the `technical/911report` directory whose path names contained an "8" as specified in the pattern, and it output all files whose paths contained an "8". This option could be helpful if you are searching for a file and know that its name contains a certain string, but you are unsure of where in the name the string is, since you could use a pattern search like in this example.  
 
 **Option 3:** `find -maxdepth`  
 
@@ -149,7 +149,7 @@ find ./technical/government  -maxdepth 2  -name "Abuse*"
 ```
 ./technical/government/Media/Abuse_penalties.txt
 ```
-In this example, I used the `-maxdepth` option to specify that the `find` command should only search at most 2 directory levels below the `./technical/government` directory for files whose names contained the string "Abuse". This returned a file within the `Media` subdirectory, which is within the `government` directory, so this command could be useful when you want to explicitly search only certain levels of a filesystem.  
+In this example, I used the `-maxdepth` option to specify that the `find` command should only search at most 2 directory levels below the `./technical/government` directory for files whose names contained the string "Abuse". This returned a file called "Abuse_penalties.txt" within the `Media` subdirectory, which is within the `government` directory, so this command could be useful when you want to explicitly search only certain levels of a filesystem.  
 
 Example 2:  
 - Command:  
