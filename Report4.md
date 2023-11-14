@@ -14,7 +14,7 @@ I cloned the fork of the repository from my Github account by typing `git clone`
 
 **Run the tests, demonstrating that they fail**
 ![Image](testsFail.png)  
-Keys pressed: `cd lab7`, `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java`
+Keys pressed: `cd lab7`, `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java`  
 To access the correct files, I first used the `cd` command to switch to the `lab7` directory. This changed my working directory so I could access the files in the `lab7` directory. Then I copied and pasted the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` and `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests.java` commands from the lab instructions to first compile all the .java files, and then run the file containing the tests, ListExamplesTests.java. The output of these JUnit tests appeared in the terminal after I ran them.  
 
 
