@@ -9,8 +9,8 @@ The command `ssh cs15lfa23la@ieng6-201.ucsd.edu` was the last command I ran in m
 
 **Clone your fork of the repository from your Github account (using the SSH URL)**  
 ![Image](clone.png)  
-Keys pressed: `git clone git@github.com:ktychn/lab7.git <enter>`  
-I cloned the fork of the repository from my Github account by typing `git clone`, and copying the `SSH` URL from the Github webpage. I pressed `<enter>` to run the command.   
+Keys pressed: `git clone <ctrl>v <enter>`  
+I cloned the fork of the repository from my Github account by typing `git clone`, and pasting the `SSH` URL I copied from my Github page, git@github.com:ktychn/lab7.git. I pressed `<enter>` to run the command.   
 
 **Run the tests, demonstrating that they fail**
 ![Image](testsFail.png)  
