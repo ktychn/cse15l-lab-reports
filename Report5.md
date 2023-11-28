@@ -21,7 +21,8 @@ Before fixing the bug, this was the content of the files:
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ArrayTests.java
 
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ArrayTests
-```   
+```  
+ 
 - ArrayTests.java  
 ```
 import static org.junit.Assert.*;
@@ -64,7 +65,8 @@ public class ArrayTests {
   }
 }
 ```  
-- ArrayExamples.java
+
+- ArrayExamples.java  
 ```
 import java.util.Arrays;
 
