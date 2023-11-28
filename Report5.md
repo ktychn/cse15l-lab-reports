@@ -115,4 +115,4 @@ To trigger the bug, I used the command `bash runTests.sh`, which executed the ba
 To fix the bug, the `++sumCount;` line had to be moved from outside the if statement condition to inside it, so that the `sumCount` variable is incremented only when the number is not the lowest. This gives the correct total value of elements, so the average is correctly calculated with the lowest value in the list excluded.  
 
 ## Part 2 -- Reflection  
-In the second half of this quarter, I learned
+In the second half of this quarter, I learned about how to use `vim` to edit text files from the command line. Before, I only knew how to open files in an editor like VSCode and edit them from there, but using `vim` to open and edit the file from the command line can really help speed up the process of editing a file. In addition, I learned that there are a ton of keyboard shortcuts you can use within `vim` that can speed up the navigation and editing process even more, such as `G` to move to the bottom of the file, `:set nu` to display line numbers, and `<ctrl> U` to delete an entire line. 
