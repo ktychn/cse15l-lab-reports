@@ -11,7 +11,8 @@ Perhaps try adding print statements to check that the values you are using in th
 I added some print lines to check the values of the `lowest`, `sum`, and `sumCount` variables after the loops like you suggested, and I see now that the `sumCount` did not have the right value. I see that I was incrementing the `sumCount` variable every iteration of the loop, including when the lowest number was identified, so I was dividing by the wrong value in the final calculation. I wanted to find the average excluding the lowest number, but I was dividing by the total number of elements, rather than the number of elements with the lowest number excluded. I changed my code so that `sumCount` was incremented within the if statement, so the total number of elements would exclude the lowest value. Thanks for the suggestion!  
 ![Image](followup.png)  
 
-5. Setup:  
+5. Setup:
+
 The files involved were ArrayTests.java and ArrayExamples.java, and the tests were being run using the runTests.sh bash script. All of these files were contained within the lab3 directory.
 
 Before fixing the bug, this was the content of the files:  
