@@ -1,6 +1,6 @@
 # Lab Report 5  
 ## Part 1 -- Debugging Scenario  
-1. Original post:
+1. Original post:  
 Hello, I am trying to test my ArrayExamples methods from Lab 3 and am running into an error for one of my tests. In my screenshot, you can see that my test for the averageWithoutLowest method is failing, since the output does not match what is expected. I am not sure what the issue with my method is, since it should be keeping track of which number is lowest, and taking the average of numbers with the lowest number excluded. My guess is that there is something wrong with a loop in my method, either the loop that finds the lowest number, or the loop that calculates the sum with the lowest number excluded. I would appreciate any help finding the issue with my code. Thank you!  
 ![Image](studentSymptom.png)  
 
@@ -16,14 +16,17 @@ I added some print lines to check the values of the `lowest`, `sum`, and `sumCou
 The files involved were ArrayTests.java and ArrayExamples.java, and the tests were being run using the runTests.sh bash script. All of these files were contained within the lab3 directory.
 
 Before fixing the bug, this was the content of the files:  
-- runTests.sh  
+- runTests.sh
+
 ```
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ArrayTests.java
 
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ArrayTests
 ```  
+
  
-- ArrayTests.java  
+- ArrayTests.java
+
 ```
 import static org.junit.Assert.*;
 
@@ -66,7 +69,9 @@ public class ArrayTests {
 }
 ```  
 
-- ArrayExamples.java  
+
+- ArrayExamples.java
+  
 ```
 import java.util.Arrays;
 
