@@ -117,7 +117,7 @@ public class ArrayExamples {
 
 To trigger the bug, I used the command `bash runTests.sh`, which executed the bash script. The bash script compiled all java files in the directory, and ran the JUnit tests in the ArrayTests.java file. The bug was the result of an error in the ArrayExamples.java code, and the symptom was the testAverageBug JUnit test in the ArrayTests.java file failing.  
 
-To fix the bug, the `++sumCount;` line had to be moved from outside the if statement condition to inside it, so that the `sumCount` variable is incremented only when the number is not the lowest. This gives the correct total value of elements, so the average is  calculated with the lowest value in the list excluded. After I made the change, the method looks like this:  
+To fix the bug, the `++sumCount;` line had to be moved from outside the if statement condition to inside it, so that the `sumCount` variable is incremented only when the number is not the lowest. This gives the correct total value of elements, so the average is  calculated with the lowest value in the list excluded. After fixing the code, the method looks like this:  
 
 ```
  static double averageWithoutLowest(double[] arr) {
