@@ -13,7 +13,7 @@ I added some print lines to check the values of the `lowest`, `sum`, and `sumCou
 
 5. Setup:
 
-The files involved were ArrayTests.java and ArrayExamples.java, and the tests were being run using the runTests.sh bash script. All of these files were contained within the lab3 directory.
+The files involved were ArrayTests.java, ArrayExamples.java, and the runTests.sh bash script. All of these files were contained within the lab3 directory.
 
 Before fixing the bug, this was the content of the files:  
 - runTests.sh
