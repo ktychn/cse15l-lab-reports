@@ -2,7 +2,7 @@
 ## Part 1 -- Debugging Scenario  
 1. Original post:  
 Hello, I am trying to test my ArrayExamples methods from Lab 3 and am running into an error for one of my tests. In my screenshot, you can see that my test for the averageWithoutLowest method is failing, since the output should be 3.5, and I am getting _ instead. I am not sure what the issue with my method is, since it should be keeping track of which number is lowest, and taking the average of numbers with the lowest number excluded. For the JUnit test, it should be ignoring the two 1.0 values, since those are lowest, but the average is being calculated incorrectly somehow. Since the other tests are running and passing, I don't think the issue is in my bash script. There are also no errors/exceptions causing the failure, it's just that the method is not returning the expected value. My guess is that there is something wrong with a loop in my averageWithoutLowest method, either the loop that finds the lowest number, or the loop that calculates the sum with the lowest number excluded. I would appreciate any help finding the issue with my code. Thank you!  
-![Image](studentSymptom.png)  
+![Image](symptom.png)  
 
 3. TA Response:  
 Perhaps try adding print statements to check that the values you are using in the final calculation are correct. For example, adding a line with `System.out.println("total = " + sumCount)` before you return the final value could help you make sure the loop is behaving as expected, and that you are doing the last calculation using the correct values.
